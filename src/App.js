@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, useRoutes } from 'react-router-dom'
+import AnimationType from './components/AnimationType';
+import nprogress from 'nprogress';
+import UseAxiosCl from './components/UseAxiosCl';
+import ScannerMathpix from './components/ScannerMathpix';
+import Background from './components/Background';
+import UseAHook from './components/UseAHook';
+import EasyApp from './components/easypeasy/EasyApp';
+import Voice from './components/voicespeech/Voice';
+import AntTable from './components/AntTable';
+import TelegramClientSend from './components/TelegramClient';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          {/* <Route
+           
+            path='/'
+            element={<ExcelExport />}
+          /> */}
+          {/* <Route path='/' element={<UseAHook />} />
+          <Route path='/useaxios' element={<UseAxiosCl />} /> */}
+          {/* <Route path='/' element={<ScannerMathpix />} /> */}
+          {/* <Route path='/' element={<Voice />} /> */}
+          <Route path='/back' element={<Background />} />
+          <Route path='/' element={<AntTable />} />
+          {/* <Route path='/' element={<TelegramClientSend />} /> */}
+        </Routes>
+      </Router>
     </div>
   );
 }
